@@ -2,18 +2,18 @@ usuario = {}
 
 def Pedir_Data ():
     nombre = input ('Por favor, ingrese su nombre: ')
-    if nombre.isalpha(): print ('Nombre inválido')
+    if nombre.isalpha() == False: print ('Nombre inválido')
     while nombre.isalpha () == False:
         nombre = input ('Ingrese nuevamente su nombre: ')
 
     apellido = input ('Por favor, ingrese su apellido: ')
-    if apellido.isalpha(): print ('Apellido inválido')
+    if apellido.isalpha() == False: print ('Apellido inválido')
     while apellido.isalpha () == False:
         apellido = input ('Ingrese nuevamente su apellido: ')
 
-    mail = input ('Por favor, ingrese su mail para enviar los resultados: ')
+    usuario["mail"] = input ('Por favor, ingrese su mail para enviar los resultados: ')
     while '@' not in usuario ['mail']:
-        mail = input ('Ingrese nuevamente su mail')
+        usuario["mail"] = input ('Ingrese nuevamente su mail: ')
 
     peso = input ('Por favor, ingrese su peso en kilogramos: ')
     peso = float (peso)
@@ -35,7 +35,6 @@ def Pedir_Data ():
     
     usuario['nombre'] = nombre
     usuario['apellido'] = apellido
-    usuario['mail'] = mail
     usuario['peso'] = peso
     usuario['altura'] = altura
     usuario['edad'] = edad
